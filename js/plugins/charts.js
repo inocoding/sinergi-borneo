@@ -42,6 +42,9 @@ class Charts {
     this._smallDoughnutChart4 = null;
     this._smallDoughnutChart5 = null;
     this._smallDoughnutChart6 = null;
+    this._smallDoughnutChart7 = null;
+    this._smallDoughnutChart8 = null;
+    this._smallDoughnutChart9 = null;
     this._smallLineChart1 = null;
     this._smallLineChart2 = null;
     this._smallLineChart3 = null;
@@ -152,6 +155,9 @@ class Charts {
       this._smallDoughnutChart4 && this._smallDoughnutChart4.destroy();
       this._smallDoughnutChart5 && this._smallDoughnutChart5.destroy();
       this._smallDoughnutChart6 && this._smallDoughnutChart6.destroy();
+      this._smallDoughnutChart7 && this._smallDoughnutChart7.destroy();
+      this._smallDoughnutChart8 && this._smallDoughnutChart8.destroy();
+      this._smallDoughnutChart9 && this._smallDoughnutChart9.destroy();
       this._initSmallDoughnutCharts();
 
       this._smallLineChart1 && this._smallLineChart1.destroy();
@@ -1536,6 +1542,15 @@ class Charts {
     }
     if (document.getElementById('smallDoughnutChart6')) {
       this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart6', [1300, 28], 'UIKL KAL');
+    }
+    if (document.getElementById('smallDoughnutChart7')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart7', [1300, 28], 'Perempuan Nominated Talent');
+    }
+    if (document.getElementById('smallDoughnutChart8')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart8', [1300, 28], 'Milenial (<=42 th) Nominated Talent');
+    }
+    if (document.getElementById('smallDoughnutChart9')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart9', [1300, 28], 'Making Digital Talent BUMN');
     }
   }
 
