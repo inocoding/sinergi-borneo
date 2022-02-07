@@ -45,6 +45,20 @@ class Charts {
     this._smallDoughnutChart7 = null;
     this._smallDoughnutChart8 = null;
     this._smallDoughnutChart9 = null;
+    this._smallDoughnutChart10 = null;
+    this._smallDoughnutChart11 = null;
+    this._smallDoughnutChart12 = null;
+    this._smallDoughnutChart13 = null;
+    this._smallDoughnutChart14 = null;
+    this._smallDoughnutChart15 = null;
+    this._smallDoughnutChart16 = null;
+    this._smallDoughnutChart17 = null;
+    this._smallDoughnutChart18 = null;
+    this._smallDoughnutChart19 = null;
+    this._smallDoughnutChart20 = null;
+    this._smallDoughnutChart21 = null;
+    this._smallDoughnutChart22 = null;
+    this._smallDoughnutChart23 = null;
     this._smallLineChart1 = null;
     this._smallLineChart2 = null;
     this._smallLineChart3 = null;
@@ -158,6 +172,20 @@ class Charts {
       this._smallDoughnutChart7 && this._smallDoughnutChart7.destroy();
       this._smallDoughnutChart8 && this._smallDoughnutChart8.destroy();
       this._smallDoughnutChart9 && this._smallDoughnutChart9.destroy();
+      this._smallDoughnutChart10 && this._smallDoughnutChart10.destroy();
+      this._smallDoughnutChart11 && this._smallDoughnutChart11.destroy();
+      this._smallDoughnutChart12 && this._smallDoughnutChart12.destroy();
+      this._smallDoughnutChart13 && this._smallDoughnutChart13.destroy();
+      this._smallDoughnutChart14 && this._smallDoughnutChart14.destroy();
+      this._smallDoughnutChart15 && this._smallDoughnutChart15.destroy();
+      this._smallDoughnutChart16 && this._smallDoughnutChart16.destroy();
+      this._smallDoughnutChart17 && this._smallDoughnutChart17.destroy();
+      this._smallDoughnutChart18 && this._smallDoughnutChart18.destroy();
+      this._smallDoughnutChart19 && this._smallDoughnutChart19.destroy();
+      this._smallDoughnutChart20 && this._smallDoughnutChart20.destroy();
+      this._smallDoughnutChart21 && this._smallDoughnutChart21.destroy();
+      this._smallDoughnutChart22 && this._smallDoughnutChart22.destroy();
+      this._smallDoughnutChart23 && this._smallDoughnutChart23.destroy();
       this._initSmallDoughnutCharts();
 
       this._smallLineChart1 && this._smallLineChart1.destroy();
@@ -1547,10 +1575,52 @@ class Charts {
       this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart7', [15, 2], 'Perempuan Nominated Talent');
     }
     if (document.getElementById('smallDoughnutChart8')) {
-      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart8', [17, 2], 'Milenial (<=42 th) Nominated Talent');
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart8', [17, -2], 'Milenial Nominated Talent');
     }
     if (document.getElementById('smallDoughnutChart9')) {
       this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart9', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart10')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart10', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart11')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart11', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart12')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart12', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart13')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart13', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart14')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart14', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart15')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart15', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart16')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart16', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart17')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart17', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart18')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart18', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart19')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart19', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart20')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart20', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart21')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart21', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart22')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart22', [13, 2], 'Making Digital Talent BUMN');
+    }
+    if (document.getElementById('smallDoughnutChart23')) {
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart23', [13, 2], 'Making Digital Talent BUMN');
     }
   }
 
