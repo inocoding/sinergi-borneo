@@ -1544,13 +1544,13 @@ class Charts {
       this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart6', [1300, 28], 'UIKL KAL');
     }
     if (document.getElementById('smallDoughnutChart7')) {
-      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart7', [1300, 28], 'Perempuan Nominated Talent');
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart7', [15, 2], 'Perempuan Nominated Talent');
     }
     if (document.getElementById('smallDoughnutChart8')) {
-      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart8', [1300, 28], 'Milenial (<=42 th) Nominated Talent');
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart8', [17, 2], 'Milenial (<=42 th) Nominated Talent');
     }
     if (document.getElementById('smallDoughnutChart9')) {
-      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart9', [1300, 28], 'Making Digital Talent BUMN');
+      this._smallDoughnutChart6 = ChartsExtend.SmallDoughnutChart('smallDoughnutChart9', [13, 2], 'Making Digital Talent BUMN');
     }
   }
 
