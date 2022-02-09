@@ -945,20 +945,20 @@ class Charts {
           tooltips: ChartsExtend.ChartTooltip(),
         },
         data: {
-          labels: ['January', 'February', 'March', 'April'],
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nop', 'Des'],
           datasets: [
             {
-              label: 'Breads',
+              label: 'Diundang',
               borderColor: Globals.primary,
               backgroundColor: 'rgba(' + Globals.primaryrgb + ',0.1)',
-              data: [456, 479, 424, 569],
+              data: [456, 479, 424, 569, 456, 479, 424, 569, 456, 479, 424, 569],
               borderWidth: 2,
             },
             {
-              label: 'Patty',
+              label: 'Lulus',
               borderColor: Globals.secondary,
               backgroundColor: 'rgba(' + Globals.secondaryrgb + ',0.1)',
-              data: [364, 504, 605, 400],
+              data: [450, 470, 414, 559, 436, 459, 414, 559, 426, 459, 404, 519],
               borderWidth: 2,
             },
           ],
@@ -1375,9 +1375,9 @@ class Charts {
                 },
                 ticks: {
                   beginAtZero: true,
-                  stepSize: 200,
+                  stepSize: 250,
                   min: 0,
-                  max: 800,
+                  max: 1000,
                   padding: 20,
                 },
               },
@@ -1458,24 +1458,24 @@ class Charts {
           },
         },
         data: {
-          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          labels: ['jan', 'feb', 'mar', 'apr', 'mei', 'jun', 'jul', 'ags', 'sep', 'okt', 'nop', 'des'],
           datasets: [
             {
-              label: 'Breads',
+              label: 'ITN',
               backgroundColor: 'rgba(' + Globals.primaryrgb + ',0.1)',
               borderColor: Globals.primary,
               borderWidth: 2,
-              data: [213, 434, 315, 367, 289, 354, 242],
+              data: [213, 434, 315, 367, 289, 354, 242, 315, 367, 289, 354, 242],
             },
             {
-              label: 'Cakes',
+              label: 'PENUGASAN',
               backgroundColor: 'rgba(' + Globals.secondaryrgb + ',0.1)',
               borderColor: Globals.secondary,
               borderWidth: 2,
-              data: [143, 234, 156, 207, 191, 214, 95],
+              data: [143, 234, 156, 207, 191, 214, 95, 156, 207, 191, 214, 95],
             },
           ],
-          icons: ['loaf', 'cupcake'],
+          icons: ['book', 'bookmark'],
         },
       });
       this._customLegendBar.generateLegend();
