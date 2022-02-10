@@ -370,7 +370,7 @@
                         <i data-cs-icon="responsive" class="me-2" data-cs-size="17"></i>
                         <span class="align-middle">Pembelajaran</span>
                     </a>
-                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#permissionsTab" role="tab">
+                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#sertifikasiTab" role="tab">
                         <i data-cs-icon="badge" class="me-2" data-cs-size="17"></i>
                         <span class="align-middle">Sertifikasi</span>
                     </a>
@@ -414,7 +414,13 @@
                   <!-- Google Maps End -->
                 </div>
                  <!-- Stats Start -->
-                  <h2 class="small-title">Demografi Pegawai & Alih Daya</h2>
+                  <div class="d-flex justify-content-between">
+                    <h2 class="small-title">Demografi Pegawai</h2>
+                    <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                      <span class="align-bottom">Detail</span>
+                      <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                    </button>
+                  </div>
                   <div class="mb-2">
                     <div class="row g-2">
                       <div class="col-12 col-sm-12 col-lg-12">
@@ -509,7 +515,13 @@
                   </div>
                   <div class="mb-2 mt-5">
                     <div class="row g-2">
-                      
+                      <div class="d-flex justify-content-between">
+                        <h2 class="small-title">Demografi Alih Daya</h2>
+                        <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                          <span class="align-bottom">Detail</span>
+                          <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                        </button>
+                      </div>
                       <div class="col-12 col-sm-12 col-lg-12">
                         <div class="card hover-border-primary">
                           <div class="card-body">
@@ -600,50 +612,119 @@
                       </div>
                     </div>
                   </div>
-                  <div class="mb-2 mt-2">
-                    <div class="row g-2">
-                      
-                      
-                      
-                    </div>
-                  </div>
-                  <div class="mb-5">
-                    <div class="row g-2">
-                      
-                      
-                      
-                    </div>
-                  </div>
                   
                  <!-- Stats End -->
                 <!-- Activity Start -->
-                <h2 class="small-title">Grafik</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Grafik</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <!-- <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i> -->
+                  </button>
+                </div>
                 <div class="row">
-                  <div class="col-12 col-xl-6">
-                    <div class="card mb-5">
-                      <div class="card-body">
-                        <!-- Doughnut Chart Start -->
-                          <section class="scroll-section" id="doughnutChartTitle">
-                            <h2 class="small-title">Sebaran Level Kompetensi Pegawai</h2>
-                              <div class="sh-35">
-                                <canvas id="doughnutChart"></canvas>
+                  <div class="col-12 p-0 ">
+                    <div class="glide" id="glideBasic">
+                      <div class="glide__track" data-glide-el="track">
+                        <div class="glide__slides">
+                          <div class="glide__slide">
+                            <div class="card mb-5">
+                              <div class="card-body">
+                                <!-- Doughnut Chart Start -->
+                                  <section class="scroll-section" id="doughnutChartTitle">
+                                    <h2 class="small-title">Sebaran Jumlah Pegawai per Unit Induk</h2>
+                                      <div class="sh-35">
+                                        <canvas id="doughnutChar"></canvas>
+                                      </div>
+                                  </section>
+                                <!-- Doughnut Chart End -->
                               </div>
-                          </section>
-                        <!-- Doughnut Chart End -->
+                            </div>
+                          </div>
+                          <div class="glide__slide">
+                            <div class="card mb-5">
+                              <div class="card-body">
+                                <!-- Doughnut Chart Start -->
+                                  <section class="scroll-section" id="doughnutChartTitle">
+                                    <h2 class="small-title">Sebaran Jumlah Alih Daya per Unit Induk</h2>
+                                      <div class="sh-35">
+                                        <canvas id="doughnutChar"></canvas>
+                                      </div>
+                                  </section>
+                                <!-- Doughnut Chart End -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="glide__slide">
+                            <div class="card mb-5">
+                              <div class="card-body">
+                                <!-- Doughnut Chart Start -->
+                                  <section class="scroll-section" id="doughnutChartTitle">
+                                    <h2 class="small-title">Sebaran Level Kompetensi Pegawai</h2>
+                                      <div class="sh-35">
+                                        <canvas id="doughnutChart"></canvas>
+                                      </div>
+                                  </section>
+                                <!-- Doughnut Chart End -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="glide__slide">
+                            <div class="card mb-2">
+                              <div class="card-body">
+                                <!-- Doughnut Chart Start -->
+                                  <section class="scroll-section" id="doughnutChartTitle">
+                                    <h2 class="small-title">Sebaran Usia Pegawai</h2>
+                                      <div class="sh-35">
+                                        <canvas id="doughnutChart1"></canvas>
+                                      </div>
+                                  </section>
+                                <!-- Doughnut Chart End -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="glide__slide">
+                            <div class="card mb-2">
+                              <div class="card-body">
+                                <!-- Doughnut Chart Start -->
+                                  <section class="scroll-section" id="doughnutChartTitle">
+                                    <h2 class="small-title">Sebaran Jenis Kelamin Pegawai</h2>
+                                      <div class="sh-35">
+                                        <canvas id="doughnutChart1"></canvas>
+                                      </div>
+                                  </section>
+                                <!-- Doughnut Chart End -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="glide__slide">
+                            <div class="card mb-2">
+                              <div class="card-body">
+                                <!-- Doughnut Chart Start -->
+                                  <section class="scroll-section" id="doughnutChartTitle">
+                                    <h2 class="small-title">Sebaran Pendidikan Pegawai</h2>
+                                      <div class="sh-35">
+                                        <canvas id="doughnutChart1"></canvas>
+                                      </div>
+                                  </section>
+                                <!-- Doughnut Chart End -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-12 col-xl-6">
-                    <div class="card mb-2">
-                      <div class="card-body">
-                        <!-- Doughnut Chart Start -->
-                          <section class="scroll-section" id="doughnutChartTitle">
-                            <h2 class="small-title">Sebaran Usia Pegawai</h2>
-                              <div class="sh-35">
-                                <canvas id="doughnutChart1"></canvas>
-                              </div>
-                          </section>
-                        <!-- Doughnut Chart End -->
+                      <div class="text-center">
+                        <span class="glide__arrows slider-nav" data-glide-el="controls">
+                          <button class="btn btn-icon btn-icon-only btn-outline-primary" data-glide-dir="<">
+                            <i data-cs-icon="chevron-left"></i>
+                          </button>
+                        </span>
+                        <span class="glide__bullets" data-glide-el="controls[nav]"></span>
+                        <span class="glide__arrows slider-nav" data-glide-el="controls">
+                          <button class="btn btn-icon btn-icon-only btn-outline-primary" data-glide-dir=">">
+                            <i data-cs-icon="chevron-right"></i>
+                          </button>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -758,7 +839,13 @@
 
               <!-- Projects Tab Start -->
               <div class="tab-pane fade" id="projectsTab" role="tabpanel">
-                <h2 class="small-title">Organisasi</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Organisasi</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
                 <!-- Projects Content Start -->
                 
                   <div class="row g-2">
@@ -808,7 +895,7 @@
                     </div>
                   </div>
                   <div class="row g-2">
-                    <h2 class="small-title mt-5">Cari Organisasi</h2>
+                    <h2 class="small-title mt-5">Struktur Organisasi</h2>
                     <div class="card">
                       <div class="card-body">
                         <form>
@@ -856,7 +943,7 @@
                           </div>
                           <div class="mb-3 row mt-5">
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                              <button type="submit" class="btn btn-primary">Cari</button>
+                              <button type="submit" class="btn btn-primary">Lihat</button>
                             </div>
                             <div class="col-sm-8 col-md-9 col-lg-10 float-right">
                               
@@ -1196,7 +1283,13 @@
 
               <!-- Friends Tab Start -->
               <div class="tab-pane fade" id="friendsTab" role="tabpanel">
-                <h2 class="small-title">Formasi Jabatan Struktural</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Formasi Jabatan Struktural</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
                 <div class="row g-2">
                   <div class="col-12 col-sm-6 col-lg-4">
                     <div class="card hover-border-primary">
@@ -1301,7 +1394,13 @@
                     </div>
                   </div>
                 </div>
-                <h2 class="small-title mt-5">Suksesi Jabatan</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Suksesi Jabatan</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
                 <div class="row g-2">
                   <div class="col-12 col-sm-6 col-lg-3">
                     <div class="card hover-border-primary">
@@ -1348,7 +1447,13 @@
                     </div>
                   </div>
                 </div>
-                <h2 class="small-title mt-5">Diklat Penjenjangan & UPK</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Diklat Penjenjangan & UPK</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
                 <div class="row g-2">
                   <div class="col-12 col-sm-6 col-lg-6">
                     <div class="card hover-border-primary">
@@ -1373,7 +1478,13 @@
                     </div>
                   </div>
                 </div>
-                <h2 class="small-title mt-5">Pembinaan Talenta Pegawai</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Pembinaan Talenta Pegawai</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
                 <div class="row g-2">
                   <div class="col-12 col-sm-6 col-lg-6">
                     <div class="card hover-border-primary">
@@ -1398,10 +1509,16 @@
                     </div>
                   </div>
                 </div>
-                <h2 class="small-title mt-5">Kinerja Pegawai</h2>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Kinerja Pegawai</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
                 <div class="row">
                   <!-- Line Chart Start -->
-                  <div class="col-12 col-xl-12">
+                  <div class="col-12 col-xl-6">
                     <section class="scroll-section" id="lineChartTitle">
                       <h2 class="small-title">NSK</h2>
                       <div class="card mb-5">
@@ -1415,7 +1532,7 @@
                   </div>
                   <!-- Line Chart End -->
                   <!-- Line Chart Start -->
-                  <div class="col-12 col-xl-12">
+                  <div class="col-12 col-xl-6">
                     <section class="scroll-section" id="lineChartTitle">
                       <h2 class="small-title">NKI</h2>
                       <div class="card mb-5">
@@ -1463,7 +1580,13 @@
                   <!-- Rounded Bar Chart Start -->
                   <div class="col-12 col-xl-12">
                     <section class="scroll-section" id="roundedBarChartTitle">
-                      <h2 class="small-title">Pembelajaran</h2>
+                      <div class="d-flex justify-content-between">
+                        <h2 class="small-title">Pembelajaran</h2>
+                        <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                          <span class="align-bottom">Detail</span>
+                          <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                        </button>
+                      </div>
                       <div class="card mb-5">
                         <div class="card-body">
                           <div class="sh-35">
@@ -1477,7 +1600,13 @@
                   <!-- Custom Legend Chart Start -->
                   <div class="col-12 col-xl-12">
                     <section class="scroll-section" id="customLegendBarTitle">
-                      <h2 class="small-title">Jenis Pelaksanaan Pembelajaran Lulus</h2>
+                      <div class="d-flex justify-content-between">
+                        <h2 class="small-title">Jenis Pelaksanaan Pembelajaran Lulus</h2>
+                        <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                          <span class="align-bottom">Detail</span>
+                          <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                        </button>
+                      </div>
                       <div class="card mb-5 sh-45">
                         <div class="card-body">
                           <div class="custom-legend-container mb-3 pb-3 d-flex flex-row"></div>
@@ -1518,6 +1647,42 @@
                 </div>
               </div>
               <!-- pembelajaran Tab End -->
+
+              <!-- About Tab Start -->
+              <div class="tab-pane fade" id="sertifikasiTab" role="tabpanel">
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Sertifikasi</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                  </button>
+                </div>
+                <div class="row g-2">
+                  <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="card hover-border-primary">
+                      <div class="card-body">
+                        <div class="heading mb-0 d-flex justify-content-between lh-1-25 mb-3">
+                          <span>Rencana Sertifikasi</span>
+                          <i data-cs-icon="toy" class="text-primary"></i>
+                        </div>
+                        <div class="cta-1 text-primary">110</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-6">
+                    <div class="card hover-border-primary">
+                      <div class="card-body">
+                        <div class="heading mb-0 d-flex justify-content-between lh-1-25 mb-3">
+                          <span>Sertifikasi Terlaksana</span>
+                          <i data-cs-icon="toy" class="text-primary"></i>
+                        </div>
+                        <div class="cta-1 text-primary">10</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- About Tab End -->
 
               <!-- About Tab Start -->
               <div class="tab-pane fade" id="aboutTab" role="tabpanel">
@@ -2047,6 +2212,7 @@
     <script src="js/vendor/jquery.barrating.min.js"></script>
     <script src="js/vendor/diagram.js"></script>
     <script src="js/vendor/select2.full.min.js"></script>
+    <script src="js/vendor/glide.min.js"></script>
 
     <!-- Vendor Scripts End -->
 
@@ -2076,6 +2242,7 @@
     <script src="js/pages/blocks.tabulardata.js"></script>
     <script src="js/common.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/plugins/carousels.js"></script>
     <!-- Page Specific Scripts End -->
 
 

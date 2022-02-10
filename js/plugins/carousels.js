@@ -33,15 +33,13 @@ class Carousels {
         document.querySelector('#glideBasic'),
         {
           gap: 0,
-          rewind: false,
+          rewind: true,
           bound: true,
-          perView: 6,
+          perView: 2,
           breakpoints: {
             400: {perView: 1},
             1000: {perView: 2},
-            1400: {perView: 3},
-            1900: {perView: 5},
-            3840: {perView: 6},
+            
           },
         },
         true,
@@ -56,15 +54,13 @@ class Carousels {
         document.querySelector('#glideNoControls'),
         {
           gap: 0,
-          rewind: false,
+          rewind: true,
           bound: true,
-          perView: 6,
+          perView: 2,
           breakpoints: {
             400: {perView: 1},
             1000: {perView: 2},
-            1400: {perView: 3},
-            1900: {perView: 5},
-            3840: {perView: 6},
+            
           },
         },
         true,
