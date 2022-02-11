@@ -355,7 +355,7 @@ class Charts {
             yAxes: [
               {
                 gridLines: {display: true, lineWidth: 1, color: Globals.separatorLight, drawBorder: false},
-                ticks: {beginAtZero: true, stepSize: 5, min: 50, max: 70, padding: 20, fontColor: Globals.alternate},
+                ticks: {beginAtZero: true, stepSize: 50, min: 0, max: 200, padding: 20, fontColor: Globals.alternate},
               },
             ],
             xAxes: [
@@ -369,11 +369,11 @@ class Charts {
           tooltips: ChartsExtend.ChartTooltipForCrosshair(),
         },
         data: {
-          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          labels: ['2018', '2019', '2020', '2021'],
           datasets: [
             {
               label: '',
-              data: [60, 54, 68, 60, 63, 60, 65],
+              data: [60, 63, 103, 65],
               borderColor: Globals.primary,
               pointBackgroundColor: Globals.foreground,
               pointBorderColor: Globals.primary,

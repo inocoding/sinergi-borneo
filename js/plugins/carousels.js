@@ -15,6 +15,7 @@ class Carousels {
       return;
     }
     this._initBasicCarousel();
+    this._initBasicCarousel2();
     this._initNoControls();
     this._initCenter();
     this._initSingle();
@@ -31,6 +32,26 @@ class Carousels {
     if (document.querySelector('#glideBasic')) {
       new GlideCustom(
         document.querySelector('#glideBasic'),
+        {
+          gap: 0,
+          rewind: true,
+          bound: true,
+          perView: 3,
+          breakpoints: {
+            400: {perView: 1},
+            1000: {perView: 2},
+            
+          },
+        },
+        true,
+      ).mount();
+    }
+  }
+
+  _initBasicCarousel2() {
+    if (document.querySelector('#glideBasic2')) {
+      new GlideCustom(
+        document.querySelector('#glideBasic2'),
         {
           gap: 0,
           rewind: true,

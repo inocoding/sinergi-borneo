@@ -40,6 +40,7 @@
     <!-- Vendor Styles Start -->
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="css/vendor/OverlayScrollbars.min.css" />
+    <link rel="stylesheet" href="css/vendor/fullcalendar.min.css">
     <link rel="stylesheet" href="css/vendor/glide.core.min.css" />
     <link rel="stylesheet" href="css/vendor/datatables.min.css" />
     <link rel="stylesheet" href="css/vendor/diagram.css" />
@@ -374,15 +375,15 @@
                         <i data-cs-icon="badge" class="me-2" data-cs-size="17"></i>
                         <span class="align-middle">Sertifikasi</span>
                     </a>
-                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#permissionsTab" role="tab">
+                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#accessTab" role="tab">
                         <i data-cs-icon="battery-full" class="me-2" data-cs-size="17"></i>
                         <span class="align-middle">Access</span>
                     </a>
-                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#permissionsTab" role="tab">
+                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#eclinicTab" role="tab">
                         <i data-cs-icon="heart" class="me-2" data-cs-size="17"></i>
                         <span class="align-middle">e-Clinic</span>
                     </a>
-                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#permissionsTab" role="tab">
+                    <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#kalenderTab" role="tab">
                         <i data-cs-icon="calendar" class="me-2" data-cs-size="17"></i>
                         <span class="align-middle">Kalender</span>
                     </a>
@@ -1574,6 +1575,200 @@
               </div>
               <!-- hcrocr Tab End -->
 
+              <!-- hcrocr Tab Start -->
+              <div class="tab-pane fade" id="accessTab" role="tabpanel">
+                <h2 class="small-title">ACCESS</h2>
+                <div class="card">
+                  <div class="card-body">
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- hcrocr Tab End -->
+
+              <!-- hcrocr Tab Start -->
+              <div class="tab-pane fade" id="eclinicTab" role="tabpanel">
+                <h2 class="small-title">e-Clinic</h2>
+                <div class="card">
+                  <div class="card-body">
+                    
+                  </div>
+                </div>
+              </div>
+              <!-- hcrocr Tab End -->
+
+              <!-- hcrocr Tab Start -->
+              <div class="tab-pane fade" id="kalenderTab" role="tabpanel">
+                <h2 class="small-title">Kalender HTD Area 4</h2>
+                <div class="container">
+                  <!-- Title and Top Buttons Start -->
+                  <div class="page-title-container">
+                    <div class="row g-0">
+                      <div class="col-auto mb-2 mb-md-0 me-auto">
+                        <div class="w-auto sw-md-30">
+                          <h1 class="mb-0 pb-0 display-4" id="title">Calendar</h1>
+                          <nav class="breadcrumb-container d-inline-block" aria-label="breadcrumb">
+                            <ul class="breadcrumb pt-0">
+                              <li class="breadcrumb-item">
+                                <a href="Dashboards.Default.html">Home</a>
+                              </li>
+                              <li class="breadcrumb-item">
+                                <a href="Apps.html">Apps</a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                      <div class="w-100 d-md-none"></div>
+                      <div class="col-auto d-flex align-items-start justify-content-end">
+                        <button type="button" class="btn btn-outline-primary btn-icon btn-icon-only ms-1" id="goPrev">
+                          <i data-cs-icon="chevron-left"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary btn-icon btn-icon-only ms-1" id="goNext">
+                          <i data-cs-icon="chevron-right"></i>
+                        </button>
+                      </div>
+                      <div class="col col-md-auto d-flex align-items-start justify-content-end">
+                        <button type="button" class="btn btn-outline-primary btn-icon btn-icon-start ms-1 w-100 w-md-auto" id="addNewEvent">
+                          <i data-cs-icon="plus"></i>
+                          <span>Add Event</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Title and Top Buttons End -->
+        
+                  <!-- Calendar Title Start -->
+                  <div class="d-flex justify-content-between">
+                    <h2 class="small-title" id="calendarTitle">Title</h2>
+                    <button
+                      class="btn btn-sm btn-icon btn-icon-only btn-foreground shadow align-top mt-n2"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                    >
+                      <i data-cs-icon="more-horizontal" data-cs-size="15"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-end shadow">
+                      <a class="dropdown-item" href="#" id="monthView">Month</a>
+                      <a class="dropdown-item" href="#" id="weekView">Week</a>
+                      <a class="dropdown-item" href="#" id="dayView">Day</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#" id="goToday">Today</a>
+                    </div>
+                  </div>
+                  <!-- Calendar Title End -->
+        
+                  <!-- Calendar Content Start -->
+                  <div class="card">
+                    <div class="card-body">
+                      <div id="calendar"></div>
+                    </div>
+                  </div>
+                  <!-- Calendar Content End -->
+        
+                  <!-- New Task Start -->
+                  <div class="modal modal-right fade" id="newEventModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalTitle">Add Event</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column">
+                          <div class="mb-3 top-label">
+                            <input class="form-control" id="eventTitle" />
+                            <span>TITLE</span>
+                          </div>
+                          <div class="mb-3 top-label">
+                            <select id="eventCategory">
+                              <option label="&nbsp;"></option>
+                              <option data-class="border-primary" value="Work">Work</option>
+                              <option data-class="border-tertiary" value="Personal">Personal</option>
+                              <option data-class="border-secondary" value="Education">Education</option>
+                            </select>
+                            <span>CATEGORY</span>
+                          </div>
+                          <div class="row g-0">
+                            <div class="col pe-2">
+                              <div class="mb-3 top-label">
+                                <input type="text" data-provide="datepicker" class="form-control" data-date-autoclose="true" id="eventStartDate" />
+                                <span>START DATE</span>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="mb-3 top-label custom-control-container time-picker-container">
+                                <input class="form-control time-picker" id="eventStartTime" />
+                                <span>START TIME</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-0">
+                            <div class="col pe-2">
+                              <div class="mb-3 top-label">
+                                <input type="text" data-provide="datepicker" class="form-control" data-date-autoclose="true" id="eventEndDate" />
+                                <span>END DATE</span>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="mb-3 top-label custom-control-container time-picker-container">
+                                <input class="form-control time-picker" id="eventEndTime" />
+                                <span>END TIME</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                          <button
+                            class="btn btn-icon btn-icon-only btn-outline-primary"
+                            type="button"
+                            data-delay='{"show":"500", "hide":"0"}'
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Delete"
+                            id="deleteEvent"
+                          >
+                            <i data-cs-icon="bin"></i>
+                          </button>
+                          <button class="btn btn-icon btn-icon-end btn-primary" type="button" id="saveEvent">
+                            <span>Save</span>
+                            <i data-cs-icon="check"></i>
+                          </button>
+                          <button class="btn btn-icon btn-icon-start btn-primary" type="button" id="addEvent">
+                            <i data-cs-icon="plus"></i>
+                            <span>Add</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- New Task End -->
+        
+                  <!-- Delete Confirm Modal Start -->
+                  <div class="modal fade modal-close-out" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="verticallyCenteredLabel">Are you sure?</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <span id="deleteConfirmDetail" class="fw-bold"></span>
+                          <span>will be deleted. Are you sure?</span>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
+                          <button type="button" id="deleteConfirmButton" class="btn btn-outline-primary">Yes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Delete Confirm Modal End -->
+                </div>
+              </div>
+              <!-- hcrocr Tab End -->
+
               <!-- pembelajaran Tab Start -->
               <div class="tab-pane fade" id="pembelajaranTab" role="tabpanel">
                 <div class="row">
@@ -1658,7 +1853,7 @@
                   </button>
                 </div>
                 <div class="row g-2">
-                  <div class="col-12 col-sm-6 col-lg-6">
+                  <div class="col-12 col-sm-6 col-lg-3">
                     <div class="card hover-border-primary">
                       <div class="card-body">
                         <div class="heading mb-0 d-flex justify-content-between lh-1-25 mb-3">
@@ -1669,7 +1864,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-6 col-lg-6">
+                  <div class="col-12 col-sm-6 col-lg-3">
                     <div class="card hover-border-primary">
                       <div class="card-body">
                         <div class="heading mb-0 d-flex justify-content-between lh-1-25 mb-3">
@@ -1680,6 +1875,57 @@
                       </div>
                     </div>
                   </div>
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card hover-border-primary">
+                      <div class="card-body">
+                        <div class="heading mb-0 d-flex justify-content-between lh-1-25 mb-3">
+                          <span>Sertifikat Aktif</span>
+                          <i data-cs-icon="toy" class="text-primary"></i>
+                        </div>
+                        <div class="cta-1 text-primary">...</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card hover-border-primary">
+                      <div class="card-body">
+                        <div class="heading mb-0 d-flex justify-content-between lh-1-25 mb-3">
+                          <span>Perlu Perpanjangan</span>
+                          <i data-cs-icon="toy" class="text-primary"></i>
+                        </div>
+                        <div class="cta-1 text-primary">...</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-5 d-flex justify-content-between">
+                  <h2 class="small-title">Grafik</h2>
+                  <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                    <!-- <span class="align-bottom">Detail</span>
+                    <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i> -->
+                  </button>
+                </div>
+                <div class="row">
+                  <!-- Rounded Bar Chart Start -->
+                  <div class="col-12 col-xl-12">
+                    <section class="scroll-section" id="areaChartTitle">
+                      <div class="d-flex justify-content-between">
+                        <h2 class="small-title">Monitor Sertifikasi Pegawai</h2>
+                        <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
+                          <span class="align-bottom">Detail</span>
+                          <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
+                        </button>
+                      </div>
+                      <div class="card mb-5">
+                        <div class="card-body">
+                          <div class="sh-35">
+                            <canvas id="areaChart"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                  <!-- Rounded Bar Chart End -->
                 </div>
               </div>
               <!-- About Tab End -->
@@ -2213,6 +2459,10 @@
     <script src="js/vendor/diagram.js"></script>
     <script src="js/vendor/select2.full.min.js"></script>
     <script src="js/vendor/glide.min.js"></script>
+    <script src="js/vendor/fullcalendar/main.min.js"></script>
+    <script src="js/vendor/moment-with-locales.min.js"></script>
+    <script src="js/vendor/datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="js/vendor/timepicker.js"></script>
 
     <!-- Vendor Scripts End -->
 
@@ -2240,6 +2490,7 @@
     <script src="js/plugins/charts.js"></script>
     <script src="js/cs/checkall.js"></script>
     <script src="js/pages/blocks.tabulardata.js"></script>
+    <script src="js/apps/calendar.js"></script>
     <script src="js/common.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/plugins/carousels.js"></script>
