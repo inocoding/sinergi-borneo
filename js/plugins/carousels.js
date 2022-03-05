@@ -36,7 +36,7 @@ class Carousels {
           gap: 0,
           rewind: true,
           bound: true,
-          perView: 3,
+          perView: 2,
           breakpoints: {
             400: {perView: 1},
             1000: {perView: 2},
