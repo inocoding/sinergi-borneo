@@ -29,6 +29,7 @@ class Charts {
     this._horizontalBarChart = null;
     this._bubbleChart = null;
     this._roundedBarChart = null;
+    this._roundedBarChart2 = null;
     this._horizontalRoundedBarChart = null;
     this._streamingLineChart = null;
     this._streamingBarChart = null;
@@ -81,6 +82,7 @@ class Charts {
 
     // Requires chartjs-plugin-rounded-bar.min.js
     this._initRoundedBarChart();
+    this._initRoundedBarChart2();
     this._initHorizontalRoundedBarChart();
 
     // Streaming charts
@@ -141,6 +143,9 @@ class Charts {
 
       this._roundedBarChart && this._roundedBarChart.destroy();
       this._initRoundedBarChart();
+
+      this._roundedBarChart2 && this._roundedBarChart2.destroy();
+      this._initRoundedBarChart2();
 
       this._horizontalRoundedBarChart && this._horizontalRoundedBarChart.destroy();
       this._initHorizontalRoundedBarChart();
@@ -956,6 +961,72 @@ class Charts {
             },
             {
               label: 'Lulus',
+              borderColor: Globals.secondary,
+              backgroundColor: 'rgba(' + Globals.secondaryrgb + ',0.1)',
+              data: [450, 470, 414, 559, 436, 459, 414, 559, 426, 459, 404, 519],
+              borderWidth: 2,
+            },
+          ],
+        },
+      });
+    }
+  }
+
+  _initRoundedBarChart2() {
+    if (document.getElementById('roundedBarChart2')) {
+      const barChart = document.getElementById('roundedBarChart2').getContext('2d');
+      this._roundedBarChart2 = new Chart(barChart, {
+        type: 'bar',
+        options: {
+          cornerRadius: parseInt(Globals.borderRadiusMd),
+          plugins: {
+            crosshair: false,
+            datalabels: {display: false},
+          },
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            yAxes: [
+              {
+                gridLines: {
+                  display: true,
+                  lineWidth: 1,
+                  color: Globals.separatorLight,
+                  drawBorder: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepSize: 100,
+                  min: 300,
+                  max: 800,
+                  padding: 20,
+                },
+              },
+            ],
+            xAxes: [
+              {
+                gridLines: {display: false},
+              },
+            ],
+          },
+          legend: {
+            position: 'bottom',
+            labels: ChartsExtend.LegendLabels(),
+          },
+          tooltips: ChartsExtend.ChartTooltip(),
+        },
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nop', 'Des'],
+          datasets: [
+            {
+              label: 'Pendaftar',
+              borderColor: Globals.primary,
+              backgroundColor: 'rgba(' + Globals.primaryrgb + ',0.1)',
+              data: [456, 479, 424, 569, 456, 479, 424, 569, 456, 479, 424, 569],
+              borderWidth: 2,
+            },
+            {
+              label: 'Hadir',
               borderColor: Globals.secondary,
               backgroundColor: 'rgba(' + Globals.secondaryrgb + ',0.1)',
               data: [450, 470, 414, 559, 436, 459, 414, 559, 426, 459, 404, 519],

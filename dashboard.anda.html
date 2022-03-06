@@ -367,6 +367,7 @@
                     <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#friendsTab" role="tab">
                       <i data-cs-icon="list" class="me-2" data-cs-size="17"></i>
                       <span class="align-middle">To Do List</span>
+                      <span class="badge bg-secondary d-none" style="margin-left: 10px;">9</span>
                     </a>
                     <a class="nav-link px-0 border-bottom border-separator-light" data-bs-toggle="tab" href="#permissionsTab" role="tab">
                       <i data-cs-icon="lock-off" class="me-2" data-cs-size="17"></i>
@@ -1041,7 +1042,7 @@
                     <div class="d-inline-block me-0 me-sm-3 float-start">
                       <!-- Add Button Start -->
                       <button
-                        class="btn btn-icon btn-icon-only btn-foreground-alternate shadow add-datatable"
+                        class="btn btn-icon btn-icon-only btn-foreground-alternate shadow"
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         title="Add"
@@ -1051,32 +1052,6 @@
                         <i data-cs-icon="plus"></i>
                       </button>
                       <!-- Add Button End -->
-
-                      <!-- Edit Button Start -->
-                      <button
-                        class="btn btn-icon btn-icon-only btn-foreground-alternate shadow edit-datatable disabled"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Edit"
-                        type="button"
-                        data-bs-delay="0"
-                      >
-                        <i data-cs-icon="edit"></i>
-                      </button>
-                      <!-- Edit Button End -->
-
-                      <!-- Delete Button Start -->
-                      <button
-                        class="btn btn-icon btn-icon-only btn-foreground-alternate shadow disabled delete-datatable"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Delete"
-                        type="button"
-                        data-bs-delay="0"
-                      >
-                        <i data-cs-icon="bin"></i>
-                      </button>
-                      <!-- Delete Button End -->
                       <button
                         class="btn btn-icon btn-icon-only btn-foreground-alternate shadow"
                         type="button"
@@ -1099,92 +1074,35 @@
                   <!-- Tasks Start -->
                   
                   <div class="col-12">
-                    <h2 class="small-title mt-2 mb-0">Task</h2>
+                    <h2 class="small-title mt-3 mb-0">Task - Saya</h2>
                     <div class="card">
                       <div class="card-body">
-                        <div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" checked />
-                              <span class="form-check-label d-block">
-                                <span>Create Wireframes</span>
-                                <span class="text-muted d-block text-small mt-0">Today 09:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" />
-                              <span class="form-check-label d-block">
-                                <span>Meeting with the team</span>
-                                <span class="text-muted d-block text-small mt-0">Today 13:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" checked />
-                              <span class="form-check-label d-block">
-                                <span>Business lunch with clients</span>
-                                <span class="text-muted d-block text-small mt-0">Today 14:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" checked />
-                              <span class="form-check-label d-block">
-                                <span>Training with the team</span>
-                                <span class="text-muted d-block text-small mt-0">Today 15:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" />
-                              <span class="form-check-label d-block">
-                                <span>Account meeting</span>
-                                <span class="text-muted d-block text-small mt-0">Today 17:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" />
-                              <span class="form-check-label d-block">
-                                <span>Gym</span>
-                                <span class="text-muted d-block text-small mt-0">Today 17:30</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" />
-                              <span class="form-check-label d-block">
-                                <span>Dinner with the family</span>
-                                <span class="text-muted d-block text-small mt-0">Today 19:30</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" />
-                              <span class="form-check-label d-block">
-                                <span>Gym</span>
-                                <span class="text-muted d-block text-small mt-0">Today 17:30</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <input type="checkbox" class="form-check-input" />
-                              <span class="form-check-label d-block">
-                                <span>Dinner with the family</span>
-                                <span class="text-muted d-block text-small mt-0">Today 19:30</span>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
+                        <table class="table table-borderless">
+                          <tbody>
+                            <tr>
+                              <td scope="row">
+                                <div class="mb-2 scroll-item">
+                                  <label class="form-check w-100 checked-line-through checked-opacity-75">
+                                    <input type="checkbox" class="form-check-input" />
+                                    <span class="form-check-label d-block">
+                                      <span>Create Wireframes</span>
+                                      <span class="text-muted d-block text-small mt-0">Today 09:00</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </td>
+                              <td align="right">
+                                <button class="btn btn-icon btn-icon-only btn-foreground hover-outline float-right" style="margin-right: 0px;" type="button">
+                                  <i data-cs-icon="edit" data-cs-size="15"></i>
+                                </button>
+                                <button class="btn btn-icon btn-icon-only btn-foreground hover-outline float-right" style="margin-right: 0px;" type="button">
+                                  <i data-cs-icon="bin" data-cs-size="15"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        
                       </div>
                     </div>
                   </div>
@@ -1194,80 +1112,49 @@
                     <h2 class="small-title mt-2 mb-0">Finish Task</h2>
                     <div class="card">
                       <div class="card-body">
-                        <div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Create Wireframes</span>
-                                <span class="text-muted d-block text-small mt-0">Today 09:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Meeting with the team</span>
-                                <span class="text-muted d-block text-small mt-0">Today 13:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Business lunch with clients</span>
-                                <span class="text-muted d-block text-small mt-0">Today 14:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Training with the team</span>
-                                <span class="text-muted d-block text-small mt-0">Today 15:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Account meeting</span>
-                                <span class="text-muted d-block text-small mt-0">Today 17:00</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Gym</span>
-                                <span class="text-muted d-block text-small mt-0">Today 17:30</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Dinner with the family</span>
-                                <span class="text-muted d-block text-small mt-0">Today 19:30</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Gym</span>
-                                <span class="text-muted d-block text-small mt-0">Today 17:30</span>
-                              </span>
-                            </label>
-                          </div>
-                          <div class="mb-2 scroll-item">
-                            <label class="form-check w-100 checked-line-through checked-opacity-75">
-                              <span class="form-check-label d-block">
-                                <span>Dinner with the family</span>
-                                <span class="text-muted d-block text-small mt-0">Today 19:30</span>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
+                        <table class="table table-borderless">
+                          <tbody>
+                            <tr>
+                              <td width="5px">1</td>
+                              <td>
+                                <div class="mb-2 scroll-item">
+                                  <label class="form-check w-100 checked-line-through checked-opacity-75">
+                                    <span class="form-check-label d-block">
+                                      <span>Create Wireframes</span>
+                                      <span class="text-muted d-block text-small mt-0">Today 09:00</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="5px">2</td>
+                              <td>
+                                <div class="mb-2 scroll-item">
+                                  <label class="form-check w-100 checked-line-through checked-opacity-75">
+                                    <span class="form-check-label d-block">
+                                      <span>Create Wireframes</span>
+                                      <span class="text-muted d-block text-small mt-0">Today 09:00</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="5px">3</td>
+                              <td>
+                                <div class="mb-2 scroll-item">
+                                  <label class="form-check w-100 checked-line-through checked-opacity-75">
+                                    <span class="form-check-label d-block">
+                                      <span>Create Wireframes</span>
+                                      <span class="text-muted d-block text-small mt-0">Today 09:00</span>
+                                    </span>
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
